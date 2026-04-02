@@ -1,0 +1,224 @@
+version: "3.1"
+
+nlu:
+
+# ---------------- GREETING ----------------
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hey there
+    - hello bot
+    - hi chatbot
+
+# ---------------- GOODBYE ----------------
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - talk to you later
+    - thanks bye
+    - ok bye
+
+# ---------------- BOT CHALLENGE ----------------
+- intent: bot_challenge
+  examples: |
+    - are you a bot
+    - are you human
+    - who are you
+    - am I talking to a bot
+    - what are you
+
+# ---------------- LOGIN ----------------
+- intent: login
+  examples: |
+    - login
+    - log into my account
+    - I want to login
+    - access my bank account
+    - sign into my account
+
+# ---------------- LOGOUT ----------------
+- intent: logout
+  examples: |
+    - logout
+    - log me out
+    - exit my account
+    - sign out
+    - close my session
+
+# ---------------- ACCOUNT NUMBER (ENTITY ADDED) ----------------
+- intent: provide_account
+  examples: |
+    - my account number is [12345678](account_number)
+    - account number [87654321](account_number)
+    - here is my account [99887766](account_number)
+    - my account is [11223344](account_number)
+
+# ---------------- ACCOUNT TYPE ----------------
+- intent: account_type
+  examples: |
+    - savings account
+    - current account
+    - I have a savings account
+    - my account type is savings
+
+# ---------------- CHECK BALANCE ----------------
+- intent: check_balance
+  examples: |
+    - check my balance
+    - show my account balance
+    - what is my balance
+    - how much money do I have
+
+# ---------------- TRANSFER MONEY ----------------
+- intent: transfer_money
+  examples: |
+    - transfer money
+    - send money
+    - transfer funds
+    - make a payment
+    - send money to another account
+
+# ---------------- PROVIDE AMOUNT (ENTITY ADDED) ----------------
+- intent: provide_amount
+  examples: |
+    - send [2000](amount)
+    - transfer [5000](amount)
+    - amount is [4000](amount)
+    - transfer [2500](amount) rupees
+
+# ---------------- TRANSACTION HISTORY ----------------
+- intent: transaction_history
+  examples: |
+    - show transaction history
+    - recent transactions
+    - account statement
+    - last transactions
+
+# ---------------- LOAN TYPES ----------------
+- intent: loan_types
+  examples: |
+    - what loans are available
+    - types of loans
+    - loan services
+
+# ---------------- LOAN INTEREST ----------------
+- intent: loan_interest
+  examples: |
+    - home loan interest rate
+    - personal loan interest rate
+    - education loan interest rate
+    - car loan interest rate
+    - interest rate for loans
+
+# ---------------- APPLY LOAN ----------------
+- intent: apply_loan
+  examples: |
+    - I want to apply for a loan
+    - apply loan
+    - I want to take a loan
+
+# ---------------- LOAN ELIGIBILITY ----------------
+- intent: loan_eligibility
+  examples: |
+    - am I eligible for loan
+    - loan eligibility criteria
+    - can I get a loan
+
+# ---------------- LOAN DOCUMENTS ----------------
+- intent: loan_documents
+  examples: |
+    - what documents are required for loan
+    - loan documents
+    - papers needed for loan
+
+# ---------------- FIND ATM ----------------
+- intent: find_atm
+  examples: |
+    - find atm
+    - nearest atm
+    - atm near me
+
+# ---------------- CITY ENTITY ----------------
+- intent: provide_city
+  examples: |
+    - [Hyderabad](city)
+    - [Mumbai](city)
+    - [Delhi](city)
+    - [Bangalore](city)
+    - [Chennai](city)
+
+# ---------------- FIND BRANCH ----------------
+- intent: find_branch
+  examples: |
+    - find bank branch
+    - nearest branch
+    - locate bank branch
+
+# ---------------- CARD SERVICES ----------------
+- intent: card_services
+  examples: |
+    - card services
+    - debit and credit card services
+
+# ---------------- BLOCK CARD ----------------
+- intent: block_card
+  examples: |
+    - block my card
+    - I lost my card
+    - debit card stolen
+
+# ---------------- CARD ACTIVATION ----------------
+- intent: card_activation
+  examples: |
+    - activate my card
+    - activate debit card
+
+# ---------------- KYC UPDATE ----------------
+- intent: kyc_update
+  examples: |
+    - update my kyc
+    - how to update kyc
+
+# ---------------- KYC DOCUMENTS ----------------
+- intent: kyc_documents
+  examples: |
+    - kyc documents
+    - documents for kyc update
+
+# ---------------- NEW INTENTS ADDED ----------------
+
+# CHECK INTEREST RATES GENERAL
+- intent: interest_rates
+  examples: |
+    - what are interest rates
+    - bank interest rates
+    - savings interest rate
+
+# OPEN ACCOUNT INFO
+- intent: open_account
+  examples: |
+    - how to open account
+    - create new account
+    - open savings account
+
+# THANK YOU
+- intent: thank_you
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+
+# ---------------- FALLBACK (VERY IMPORTANT) ----------------
+- intent: nlu_fallback
+  examples: |
+    - asdfgh
+    - qwerty
+    - I don't understand
+    - random text
+    - blah blah

@@ -1,0 +1,20 @@
+# This file contains endpoints configuration
+
+# Action server (for custom actions)
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Model storage (optional - default is local)
+# models:
+#   url: "http://localhost:5002/api/projects/default/models/tags/production"
+
+# Tracker store (optional - for saving conversations)
+# tracker_store:
+#   type: in_memory
+
+# Event broker (optional - advanced use)
+# event_broker:
+#   type: pika
+#   url: localhost
+#   username: username
+#   password: password

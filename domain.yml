@@ -1,0 +1,185 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - login
+  - logout
+  - provide_account
+  - account_type
+  - check_balance
+  - transfer_money
+  - provide_amount
+  - transaction_history
+  - loan_types
+  - loan_interest
+  - apply_loan
+  - loan_eligibility
+  - loan_documents
+  - find_atm
+  - provide_city
+  - find_branch
+  - card_services
+  - block_card
+  - card_activation
+  - kyc_update
+  - kyc_documents
+  - interest_rates
+  - open_account
+  - thank_you
+  - nlu_fallback
+
+entities:
+  - account_number
+  - amount
+  - city
+
+slots:
+  account_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: account_number
+
+  amount:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: amount
+
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+
+responses:
+
+# ---------------- BASIC ----------------
+  utter_greet:
+    - text: "Hello 👋 Welcome to Banking Chatbot! How can I help you?"
+
+  utter_goodbye:
+    - text: "Thank you for using our service 😊 Have a great day!"
+
+  utter_bot_challenge:
+    - text: "I am an AI-powered banking assistant 🤖"
+
+# ---------------- LOGIN FLOW ----------------
+  utter_login:
+    - text: "Please enter your account number to login."
+
+  utter_account_received:
+    - text: "Account number received ✅ Verifying details..."
+
+  utter_login_success:
+    - text: "✅ Login successful! You can now access your banking services."
+
+  utter_logout:
+    - text: "You have been successfully logged out."
+
+# ---------------- ACCOUNT ----------------
+  utter_account_type:
+    - text: "We offer Savings and Current accounts."
+
+  utter_balance:
+    - text: "Your account balance is ₹50,000 (demo data)."
+
+# ---------------- MONEY TRANSFER ----------------
+  utter_transfer:
+    - text: "Please provide the amount you want to transfer."
+
+  utter_amount_received:
+    - text: "₹{amount} received. Transaction is being processed 💸"
+
+# ---------------- TRANSACTIONS ----------------
+  utter_transaction_history:
+    - text: "Showing last 5 transactions (demo data)."
+
+# ---------------- LOANS ----------------
+  utter_loan_types:
+    - text: "We offer Home, Personal, Education, and Car loans."
+
+  utter_loan_interest:
+    - text: "Loan interest rates start from 8.5% depending on loan type."
+
+  utter_apply_loan:
+    - text: "You can apply for a loan online or visit nearest branch."
+
+  utter_loan_eligibility:
+    - text: "Loan eligibility depends on income, credit score, and employment."
+
+  utter_loan_documents:
+    - text: "Required documents: ID proof, Address proof, Income proof."
+
+# ---------------- ATM / BRANCH ----------------
+  utter_find_atm:
+    - text: "Please provide your city to find nearest ATM."
+
+  utter_branch:
+    - text: "Nearest branch in {city} will be shown (demo)."
+
+# ---------------- CARD ----------------
+  utter_card_services:
+    - text: "We provide Debit card, Credit card, and ATM services."
+
+  utter_block_card:
+    - text: "🚫 Your card has been blocked immediately for security."
+
+  utter_card_activation:
+    - text: "Your card can be activated via ATM or mobile banking."
+
+# ---------------- KYC ----------------
+  utter_kyc_update:
+    - text: "You can update KYC online or at nearest branch."
+
+  utter_kyc_documents:
+    - text: "KYC requires ID proof and address proof."
+
+# ---------------- GENERAL ----------------
+  utter_interest_rates:
+    - text: "Savings account interest starts from 3% annually."
+
+  utter_open_account:
+    - text: "You can open an account online or visit bank branch."
+
+  utter_thank_you:
+    - text: "You're welcome 😊 Happy to help!"
+
+# ---------------- FALLBACK ----------------
+  utter_fallback:
+    - text: "Sorry, I didn’t understand that. Can you please rephrase?"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_bot_challenge
+  - utter_login
+  - utter_account_received
+  - utter_login_success
+  - utter_logout
+  - utter_account_type
+  - utter_balance
+  - utter_transfer
+  - utter_amount_received
+  - utter_transaction_history
+  - utter_loan_types
+  - utter_loan_interest
+  - utter_apply_loan
+  - utter_loan_eligibility
+  - utter_loan_documents
+  - utter_find_atm
+  - utter_branch
+  - utter_card_services
+  - utter_block_card
+  - utter_card_activation
+  - utter_kyc_update
+  - utter_kyc_documents
+  - utter_interest_rates
+  - utter_open_account
+  - utter_thank_you
+  - utter_fallback

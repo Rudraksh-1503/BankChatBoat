@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+- story: test greet login balance
+  steps:
+  - user: "hi"
+  - bot: utter_greet
+  - user: "login"
+  - bot: utter_login
+  - user: "account 12345"
+  - slot_was_set:
+      - account_number: 12345
+  - bot: utter_provide_account
+  - user: "check balance"
+  - action: action_check_balance
+
+- story: test transfer
+  steps:
+  - user: "transfer money"
+  - bot: utter_transfer_money
+  - user: "1000"
+  - slot_was_set:
+      - amount: 1000
+  - bot: utter_provide_amount
+  - action: action_transfer_money
+
+- story: test atm
+  steps:
+  - user: "find atm"
+  - bot: utter_find_atm
+  - user: "mumbai"
+  - slot_was_set:
+      - city: mumbai
+  - action: action_find_atm
+
+- story: test loan
+  steps:
+  - user: "loan types"
+  - bot: utter_loan_types
+  - user: "home loan interest"
+  - bot: utter_home_loan_interest
+
+- story: test goodbye
+  steps:
+  - user: "goodbye"
+  - bot: utter_goodbye
+

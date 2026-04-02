@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.log
+*.db
+.env
+venv/
+rasa_env/
+models/
+node_modules/
+*.zip
+*.tar.gz

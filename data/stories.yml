@@ -1,0 +1,109 @@
+version: "3.1"
+
+stories:
+
+# ---------------- GREETING FLOW ----------------
+- story: greeting path
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+# ---------------- LOGIN COMPLETE FLOW ----------------
+- story: login full flow
+  steps:
+    - intent: login
+    - action: utter_login
+    - intent: provide_account
+    - action: utter_account_received
+    - action: utter_login_success
+
+# ---------------- BALANCE AFTER LOGIN ----------------
+- story: check balance after login
+  steps:
+    - intent: check_balance
+    - action: utter_balance
+
+# ---------------- MONEY TRANSFER FLOW ----------------
+- story: transfer money flow
+  steps:
+    - intent: transfer_money
+    - action: utter_transfer
+    - intent: provide_amount
+    - action: utter_amount_received
+
+# ---------------- TRANSACTION HISTORY ----------------
+- story: transaction history flow
+  steps:
+    - intent: transaction_history
+    - action: utter_transaction_history
+
+# ---------------- LOAN FLOW ----------------
+- story: loan inquiry flow
+  steps:
+    - intent: loan_types
+    - action: utter_loan_types
+
+- story: loan interest flow
+  steps:
+    - intent: loan_interest
+    - action: utter_loan_interest
+
+- story: loan apply flow
+  steps:
+    - intent: apply_loan
+    - action: utter_apply_loan
+
+# ---------------- ATM FLOW ----------------
+- story: atm location flow
+  steps:
+    - intent: find_atm
+    - action: utter_find_atm
+    - intent: provide_city
+    - action: utter_branch
+
+# ---------------- BRANCH FLOW ----------------
+- story: branch direct flow
+  steps:
+    - intent: find_branch
+    - action: utter_branch
+
+# ---------------- CARD FLOW ----------------
+- story: block card flow
+  steps:
+    - intent: block_card
+    - action: utter_block_card
+
+- story: activate card flow
+  steps:
+    - intent: card_activation
+    - action: utter_card_activation
+
+# ---------------- KYC FLOW ----------------
+- story: kyc update flow
+  steps:
+    - intent: kyc_update
+    - action: utter_kyc_update
+
+- story: kyc documents flow
+  steps:
+    - intent: kyc_documents
+    - action: utter_kyc_documents
+
+# ---------------- GENERAL FLOW ----------------
+- story: open account flow
+  steps:
+    - intent: open_account
+    - action: utter_open_account
+
+- story: interest rate flow
+  steps:
+    - intent: interest_rates
+    - action: utter_interest_rates
+
+# ---------------- THANK YOU + GOODBYE ----------------
+- story: polite ending
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
+    - intent: goodbye
+    - action: utter_goodbye

@@ -1,0 +1,159 @@
+version: "3.1"
+
+rules:
+
+# ---------------- GREETING ----------------
+- rule: greet user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+# ---------------- GOODBYE ----------------
+- rule: goodbye user
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+# ---------------- BOT CHALLENGE ----------------
+- rule: bot identity
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+# ---------------- LOGIN FLOW ----------------
+- rule: login request
+  steps:
+    - intent: login
+    - action: utter_login
+
+- rule: account input after login
+  steps:
+    - intent: provide_account
+    - action: utter_account_received
+    - action: utter_login_success
+
+# ---------------- LOGOUT ----------------
+- rule: logout user
+  steps:
+    - intent: logout
+    - action: utter_logout
+
+# ---------------- ACCOUNT ----------------
+- rule: account type info
+  steps:
+    - intent: account_type
+    - action: utter_account_type
+
+- rule: check balance
+  steps:
+    - intent: check_balance
+    - action: utter_balance
+
+# ---------------- MONEY TRANSFER ----------------
+- rule: transfer request
+  steps:
+    - intent: transfer_money
+    - action: utter_transfer
+
+- rule: provide amount
+  steps:
+    - intent: provide_amount
+    - action: utter_amount_received
+
+# ---------------- TRANSACTIONS ----------------
+- rule: transaction history
+  steps:
+    - intent: transaction_history
+    - action: utter_transaction_history
+
+# ---------------- LOANS ----------------
+- rule: loan types
+  steps:
+    - intent: loan_types
+    - action: utter_loan_types
+
+- rule: loan interest
+  steps:
+    - intent: loan_interest
+    - action: utter_loan_interest
+
+- rule: apply loan
+  steps:
+    - intent: apply_loan
+    - action: utter_apply_loan
+
+- rule: loan eligibility
+  steps:
+    - intent: loan_eligibility
+    - action: utter_loan_eligibility
+
+- rule: loan documents
+  steps:
+    - intent: loan_documents
+    - action: utter_loan_documents
+
+# ---------------- ATM ----------------
+- rule: find atm
+  steps:
+    - intent: find_atm
+    - action: utter_find_atm
+
+- rule: provide city for atm/branch
+  steps:
+    - intent: provide_city
+    - action: utter_branch
+
+# ---------------- BRANCH ----------------
+- rule: find branch direct
+  steps:
+    - intent: find_branch
+    - action: utter_branch
+
+# ---------------- CARD ----------------
+- rule: card services
+  steps:
+    - intent: card_services
+    - action: utter_card_services
+
+- rule: block card
+  steps:
+    - intent: block_card
+    - action: utter_block_card
+
+- rule: activate card
+  steps:
+    - intent: card_activation
+    - action: utter_card_activation
+
+# ---------------- KYC ----------------
+- rule: kyc update
+  steps:
+    - intent: kyc_update
+    - action: utter_kyc_update
+
+- rule: kyc documents
+  steps:
+    - intent: kyc_documents
+    - action: utter_kyc_documents
+
+# ---------------- GENERAL ----------------
+- rule: interest rates
+  steps:
+    - intent: interest_rates
+    - action: utter_interest_rates
+
+- rule: open account
+  steps:
+    - intent: open_account
+    - action: utter_open_account
+
+- rule: thank you
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
+
+# ---------------- FALLBACK (VERY IMPORTANT) ----------------
+- rule: fallback rule
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallback

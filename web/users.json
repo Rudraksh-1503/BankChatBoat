@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "username": "Rudraksh",
+    "mobile": "9876543210",
+    "account_number": "1234567890",
+    "password": "pass123"
+  },
+  {
+    "id": 2,
+    "username": "Shiva sai
+    ",
+    "mobile": "9876543211",
+    "account_number": "0987654321",
+    "password": "pass456"
+  }
+]
